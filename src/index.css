@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --color-accent: #e5b042;
+    --color-accent-hover: #f5c358;
+    --color-dark-bg: #0a0b0e;
+    --color-dark-card: #12141a;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #0a0b0e;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0b0e;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0b0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #252833;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e5b042;
+}
+
+/* Luxury Automotive Glows */
+.glow-gold {
+  box-shadow: 0 0 25px -4px rgba(229, 176, 66, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(14, 165, 233, 0.35);
+}
+
+.glow-gold-border {
+  border-color: rgba(229, 176, 66, 0.45);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fff2cc 0%, #e5b042 50%, #c2881a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-metallic-dark {
+  background: radial-gradient(circle at 50% 0%, #1a1c24 0%, #0c0d12 70%, #060709 100%);
+}
+
+.bg-glass-panel {
+  background: rgba(18, 20, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-glass-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Subtle carbon texture pattern */
+.bg-carbon {
+  background-color: #0c0d12;
+  background-image: 
+    radial-gradient(#1e222d 0.75px, transparent 0.75px), 
+    radial-gradient(#1e222d 0.75px, #0c0d12 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Micro-animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes headlightSweep {
+  0% { transform: translateX(-100%) skewX(-20deg); }
+  50%, 100% { transform: translateX(200%) skewX(-20deg); }
+}
+
+.headlight-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.headlight-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  animation: headlightSweep 6s infinite;
+  pointer-events: none;
+}

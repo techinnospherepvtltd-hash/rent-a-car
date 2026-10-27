@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd778"/>
+      <stop offset="50%" stop-color="#e5b042"/>
+      <stop offset="100%" stop-color="#b88318"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181920"/>
+      <stop offset="100%" stop-color="#0a0b0e"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="20" width="472" height="472" rx="110" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="22"/>
+  <rect x="44" y="44" width="424" height="424" rx="90" fill="none" stroke="#2a2c38" stroke-width="6"/>
+  <!-- N -->
+  <polygon points="112,368 112,144 164,144 164,368" fill="url(#goldGrad)"/>
+  <polygon points="225,368 225,144 276,144 276,368" fill="url(#goldGrad)"/>
+  <polygon points="112,144 164,144 276,368 225,368" fill="#ffd778"/>
+  <!-- 1 -->
+  <polygon points="307,368 307,174 286,204 307,144 348,144 348,368" fill="url(#goldGrad)"/>
+  <!-- 0 -->
+  <ellipse cx="400" cy="256" rx="52" ry="112" fill="none" stroke="url(#goldGrad)" stroke-width="38"/>
+  <!-- Speed Dash -->
+  <polygon points="112,414 452,414 432,432 92,432" fill="url(#goldGrad)"/>
+</svg>
